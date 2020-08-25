@@ -14,11 +14,21 @@ def selection_sort(arr):
     return arr
 
 
-# TO-DO:  implement the Bubble Sort function below
+# # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
+    unsorted = True
 
+    while unsorted: 
+        swapped = False
 
+        for i in range(len(arr) - 1): # Loop through your array
+            if arr[i] > arr[i + 1]: # Compare each element to its neighbor
+                temp = arr[i] # If elements in wrong position (relative to each other, swap them)
+                arr[i] = arr[i + 1] # If elements in wrong position (relative to each other, swap them)
+                arr[i + 1] = temp # If elements in wrong position (relative to each other, swap them)
+                swapped = True
+        if not swapped:
+            unsorted = False
     return arr
 
 '''
